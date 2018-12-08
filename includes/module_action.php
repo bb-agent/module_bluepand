@@ -44,27 +44,27 @@ if($service != "") {
     
     if ($action == "start") {
 		$exec = "sudo $bin_pand -c ".$bluepand_mac." --role PANU --persist 1";
-		exec_fruitywifi($exec);
+		exec_blackbulb($exec);
         
     } else if($action == "stop") {
         // STOP MODULE
         $exec = "$bin_killall $bin_pand_name";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
     else if($action == "pair") {
         $exec = "$bin_hciconfig hci0 piscan";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
 		
         //$exec = "$bin_bluetooth_agent 1234 > /dev/null 2>&1 &"; //run the agent in the background
 		$exec = "$bin_bluetooth_agent $bluepand_keypass > /dev/null 2>&1 &"; //run the agent in the background
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
     else if($action == "stop_pair") {
         $exec = "$bin_killall $bin_bluetooth_agent";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
 		
         $exec = "$bin_hciconfig hci0 noscan";
-        exec_fruitywifi($exec);
+        exec_blackbulb($exec);
     }
 
 }
@@ -72,10 +72,10 @@ if($service != "") {
 if ($install == "install_$mod_name") {
 
     $exec = "chmod 755 install.sh";
-    exec_fruitywifi($exec);
+    exec_blackbulb($exec);
 
     $exec = "$bin_sudo ./install.sh";
-    exec_fruitywifi($exec);
+    exec_blackbulb($exec);
 
     header('Location: ../../install.php?module='.$mod_name);
     exit;

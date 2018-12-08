@@ -40,10 +40,10 @@ $bluepand_keypass = $_POST["bluepand_keypass"];
 if ($type == "settings") {
 
     $exec = "/bin/sed -i 's/bluepand_mac.*/bluepand_mac = \\\"".$bluepand_mac."\\\";/g' options_config.php";
-    $output = exec_fruitywifi($exec);
+    $output = exec_blackbulb($exec);
 
 	$exec = "/bin/sed -i 's/bluepand_keypass.*/bluepand_keypass = \\\"".$bluepand_keypass."\\\";/g' options_config.php";
-    $output = exec_fruitywifi($exec);
+    $output = exec_blackbulb($exec);
 	
     header('Location: ../index.php?tab=0');
     exit;

@@ -1,5 +1,5 @@
 module_bluepand
 ===========
 
-FruityWifi BluePand module
+BlackBulb BluePand module
 

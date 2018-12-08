@@ -21,7 +21,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<title>FruityWifi</title>
+<title>BlackBulb</title>
 <script src="../js/jquery.js"></script>
 <script src="../js/jquery-ui.js"></script>
 <link rel="stylesheet" href="../css/jquery-ui.css" />
